@@ -84,7 +84,7 @@ PM_START_TEXT = """
 *Hello {} !*
 ────────────────────────
 ✪ I'm an anime theme bot designed to help manage your telegram group with a lot features.
-✪ Maintained by @kyuraonly 🌠
+✪ Maintained by @kyuraonly ⚡
 ────────────────────────
 Hit the /help to see available command.
 """
@@ -132,7 +132,7 @@ CHAT_SETTINGS = {}
 USER_SETTINGS = {}
 
 for module_name in ALL_MODULES:
-    imported_module = importlib.import_module("SkyzuRobot.modules." + module_name)
+    imported_module = importlib.import_module("KyuraRobot.modules." + module_name)
     if not hasattr(imported_module, "__mod_name__"):
         imported_module.__mod_name__ = imported_module.__name__
 
@@ -467,7 +467,7 @@ def Skyzu_about_callback(update, context):
                     [
                         InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ​", url="t.me/kyurasupport"),
                         InlineKeyboardButton(
-                            text="ᴜᴘᴅᴀᴛᴇs​", url="https://t.me/Kyurasupport"
+                            text="ᴜᴘᴅᴀᴛᴇs​", url="https://t.me/KyuraProjects"
                         ),
                     ],
                     [
@@ -755,7 +755,7 @@ def donate(update: Update, context: CallbackContext):
             DONATE_STRING, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True
         )
 
-        if OWNER_ID != 1606221784:
+        if OWNER_ID != 5041386707:
             update.effective_message.reply_text(
                 "I'm free for everyone ❤️ If you wanna make me smile, just join"
                 "[My Channel]({})".format(DONATION_LINK),
@@ -831,7 +831,7 @@ def main():
     )
 
     about_callback_handler = CallbackQueryHandler(
-        Skyzu_about_callback, pattern=r"Skyzu_", run_async=True
+        Skyzu_about_callback, pattern=r"Kyura_", run_async=True
     )
 
     source_callback_handler = CallbackQueryHandler(
