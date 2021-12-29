@@ -45,7 +45,7 @@ def afk(update: Update, context: CallbackContext):
     sql.set_afk(update.effective_user.id, reason)
     fname = update.effective_user.first_name
     try:
-        update.effective_message.reply_text("{} is now away!{}".format(fname, notice))
+        update.effective_message.reply_text("{} kalo pergi gosah balik lagi kontol!{}".format(fname, notice))
     except BadRequest:
         pass
 
@@ -64,7 +64,7 @@ def no_longer_afk(update: Update, context: CallbackContext):
         firstname = update.effective_user.first_name
         try:
             options = [
-                "{} Telah Mati Di Telan Memek!",
+                "{} abis Mati Di Telan Memek lu?",
                 "{} Hayo Balik Kesini Mo Ngapain?",
                 "{} ngapain lu kontol balik lgi",
                 "{} capek ya coli trus?",
